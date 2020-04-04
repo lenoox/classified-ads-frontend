@@ -1,0 +1,53 @@
+<section class="jumbotron">
+  <div class="container">
+    <h1>Ogłoszenia w twojej okolicy</h1>
+    <div>
+      <form>
+        <div class="row form-row ">
+          <div class="col-3">
+            <select class="custom-select" id="inputGroupSelect02">
+              <option value="all">Wszystkie</option>
+              <option value="headphones">Słuchawki</option>
+            </select>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Czego szukasz?" aria-label="Czego szukasz?">
+          </div>
+          <div class="col-3">
+            <input  type="text" class="form-control" placeholder="Lokalizacja" aria-label="Lokalizacja">
+          </div>
+          <div class="col-1">
+            <button  class="btn btn-outline-success btn-search btn-block" disabled>Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<div class="album py-5">
+  <div class="container">
+    <h3 class="text-center">Ostatnio dodane</h3>
+    <div class="row">
+
+      <div *ngFor="let items of ItemsList" class="col-md-3">
+        <div class="card mb-4 shadow-sm">
+          <img src="https://picsum.photos/250/180" class="card-img-top" width="100%" height="180" alt="">
+          <div class="card-body">
+            <h4 class="card-text">{{items.name}}</h4>
+            <p class="card-text">
+              {{ (items.description.length>100)? (items.description | slice:0:100)+'..':(items.description) }}
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+
+              <p class="card-text">{{items.price| currency:'PLN': true:'3.0'}}</p>
+              <div class="btn-group">
+                <a class="btn btn-md btn-outline-success">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
