@@ -31,7 +31,7 @@
 
       <div *ngFor="let items of ItemsList" class="col-md-3">
         <div class="card mb-4 shadow-sm">
-          <img src="https://picsum.photos/250/180" class="card-img-top" width="100%" height="180" alt="">
+          <img src="https://picsum.photos/250/180" [routerLink]="['/details',items.id]" class="card-img-top" width="100%" height="180" alt="">
           <div class="card-body">
             <h4 class="card-text">{{items.name}}</h4>
             <p class="card-text">
@@ -41,7 +41,7 @@
 
               <p class="card-text">{{items.price| currency:'PLN': true:'1.0'}}</p>
               <div class="btn-group">
-                <a class="btn btn-md btn-outline-success">View</a>
+                <a class="btn btn-md btn-outline-success" [routerLink]="['/details',items.id]">View</a>
               </div>
             </div>
           </div>
