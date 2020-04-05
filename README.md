@@ -3,7 +3,11 @@ Classified Ads - Angular Frontend <br />
 Project Classified Ads has backend repository in [Classified Ads - Backend](https://github.com/lenoox/classified-ads-backend)
 ### Technology Stack
  - Git flow
- - Angular 8
+ - Angular 8 
+### Screenshot
+![Image of Yaktocat](https://raw.githubusercontent.com/lenoox/classified-ads-frontend/master/screenshot/homepage.jpg)
+
+
 ## Run locally with Angular CLI
  - Run command in your terminal
 ```
